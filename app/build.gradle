@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0"
+
+    dexOptions {
+        incremental = true;
+        preDexLibraries = false
+        javaMaxHeapSize "4g" // 2g should be also OK
+    }
+
+    defaultConfig {
+        applicationId "com.buzi.phonecleaner"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 6
+        versionName "1.5"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        maven {
+            url 'http://repository.adbuddiz.com/maven'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.github.gabrielemariotti.cards:cardslib-core:2.1.0'
+    compile 'com.google.android.gms:play-services:7.8.0'
+    compile files('libs/io.display.sdk-0.9.5.jar')
+    compile files('libs/AF-Android-SDK.jar')
+    compile files('libs/StartAppInApp-3.4.2.jar')
+    compile 'com.purplebrain.adbuddiz.sdk:AdBuddiz-Java:3.+'
+}

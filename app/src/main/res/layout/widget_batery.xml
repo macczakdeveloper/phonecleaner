@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layer_card_background"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/wifi"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/wifi_off" />
+
+    <TextView
+        android:layout_width="2dp"
+        android:layout_height="35dp"
+        android:background="#5FFF"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/data"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/data_off" />
+
+    <TextView
+        android:layout_width="2dp"
+        android:layout_height="35dp"
+        android:background="#5FFF"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/brightness"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/bri_auto" />
+
+    <TextView
+        android:layout_width="2dp"
+        android:layout_height="35dp"
+        android:background="#5FFF"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/volumen"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/vol_low" />
+
+    <TextView
+        android:layout_width="2dp"
+        android:layout_height="35dp"
+        android:background="#5FFF"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/gps"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/gps_off" />
+
+    <TextView
+        android:layout_width="2dp"
+        android:layout_height="35dp"
+        android:background="#5FFF"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/time_out"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/time_out_15s" />
+</LinearLayout>

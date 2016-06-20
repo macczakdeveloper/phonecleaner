@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#0D527A"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/init"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/item_fijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_card_background">
+
+            <ImageView
+                android:id="@+id/velocimetro"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/velocimetro_ram" />
+
+            <ImageView
+                android:id="@+id/aguja"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/aguja" />
+
+            <TextView
+                android:id="@+id/memory_concurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/aguja"
+                android:gravity="center"
+                android:text="0 MB"
+                android:textColor="#F16521"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/text_avalible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/memory_concurrent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/aguja"
+                android:gravity="center"
+                android:text="can be released"
+                android:textColor="#F16521"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/memory_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/text_avalible"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/aguja"
+                android:gravity="center"
+                android:text="57.56MB / 1.79 MB"
+                android:textColor="#F16521"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/button_text"
+                android:enabled="false"
+                android:text="@string/optimizer" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ADS_BANNER_ID" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout"
+            android:layout_below="@+id/item_fijo"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@android:color/transparent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/finish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        android:background="@drawable/layer_card_background" >
+
+        <ImageView
+            android:id="@+id/image_finish"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/finish"
+            android:layout_above="@+id/text_finish"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/text_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#F16521"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:text="Complete optimization!"/>
+
+        <TextView
+            android:id="@+id/text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_finish"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:textColor="#F16521"
+            android:textSize="50sp"
+            android:text="Excelent!"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

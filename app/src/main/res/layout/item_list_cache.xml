@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_card_background"
+        android:descendantFocusability="afterDescendants"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="3dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/app_icon"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="3dp"
+                android:textSize="18sp"
+                android:text="@string/str_prueba_nombre" />
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="#F16521"
+                android:text="@string/str_prueba_inf"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

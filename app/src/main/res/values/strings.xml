@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Buzi Phone Cleaner</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list_app">ListAppActivity</string>
+    <string name="botonDesintalar">Uninstall</string>
+    <string name="title_activity_llamadas_mensajes">LlamadasMensajesActivity</string>
+    <string name="limpiar">Clear History</string>
+    <string name="limpiarlogs">Clear Logs</string>
+    <string name="title_activity_cache">CacheActivity</string>
+    <string name="nohaycache">There is not applications to clear its cache.</string>
+    <string name="clearall">Clear All Cache</string>
+    <string name="optimizer">Optimizer</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="app">Applications:</string>
+    <string name="apps">0</string>
+    <string name="espacio">Occupied:</string>
+    <string name="cantidad">0 Bytes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="str_prueba_nombre">Phone Cleaner</string>
+    <string name="str_prueba_fecha">13/05/2014</string>
+    <string name="str_prueba_byte">5,73 Kb</string>
+    <string name="str_prueba_inf">Cache: 12 KB | Storage: 19,09 MB | Total: 19,21</string>
+
+    <!-- Rate My Application -->
+    <string name="rate_title">Rate</string>
+    <string name="rate_comment_1">If you enjoy using</string>
+    <string name="rate_comment_2">please take a moment to rate it. Thank you for your support!</string>
+    <string name="ratemyapp_accept_button_label">Rate Now</string>
+    <string name="ratemyapp_later_button_label">Remind me later</string>
+    <string name="ratemyapp_cancel_button_label">No, thank you</string>
+
+    <array name="packer_name_default">
+        <item>system</item>
+        <item>com.android.systemui</item>
+        <item>com.android.phone</item>
+        <item>com.android.nfc</item>
+        <item>com.android.inputmethod.latin</item>
+        <item>com.google.android.inputmethod.latin</item>
+        <item>com.android.mms</item>
+        <item>com.google.android.deskclock</item>
+        <item>com.android.deskclock</item>
+        <item>com.android.defcontainer</item>
+        <item>com.android.launcher</item>
+        <item>com.android.bluetooth</item>
+        <item>com.google.android.googlequicksearchbox</item>
+        <item>com.google.android.launcher</item>
+    </array>
+
+</resources>

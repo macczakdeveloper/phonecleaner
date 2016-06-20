@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="#0D527A" >
+
+    <RelativeLayout
+        android:id="@+id/item_fijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/selector_card_background">
+
+        <ImageView
+            android:id="@+id/velocimetro"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/velocimetro" />
+
+        <ImageView
+            android:id="@+id/aguja"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/aguja" />
+
+        <ImageView
+            android:id="@+id/state"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/usb" />
+
+        <!--<TextView
+            android:id="@+id/text_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/velocimetro"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="Time left:"
+            android:textColor="#F16521"
+            android:textSize="16sp" />-->
+
+        <!--<TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/text_time_left"
+            android:layout_toRightOf="@+id/velocimetro"
+            android:gravity="center"
+            android:text="49h 10m"
+            android:textColor="#F16521"
+            android:textSize="38sp" />-->
+
+        <TextView
+            android:id="@+id/text_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/aguja"
+            android:gravity="center"
+            android:text="Temperature: 28.3 ºC"
+            android:textColor="#F16521"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_temperature"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/aguja"
+            android:gravity="center"
+            android:text="Voltage: 4.335 V"
+            android:textColor="#F16521"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_voltage"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/aguja"
+            android:gravity="center"
+            android:text="Capacity: 2100 mAh"
+            android:textColor="#F16521"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="ADS_BANNER_ID" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="380dp"
+        android:columnWidth="90dp"
+        android:fadingEdge="none"
+        android:horizontalSpacing="10dp"
+        android:listSelector="#00000000"
+        android:numColumns="2"
+        android:padding="10dp"
+        android:layout_above="@id/layout"
+        android:layout_below="@+id/item_fijo"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+
+</RelativeLayout>
